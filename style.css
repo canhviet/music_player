@@ -55,7 +55,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     margin: 40px 20px;
-    height: 4px;
+    height: 7px;
     width: 90%;
 }
 
@@ -91,6 +91,16 @@ body{
 
 .fa:hover{
     filter: brightness(80%);
+}
+
+.volume {
+    margin: 0;
+    display: flex;
+}
+
+.volume i {
+    margin: 0 10px 0 30px;
+    color: grey;
 }
 @media screen and (max-width: 376px) {
     .player-container{

@@ -9,6 +9,8 @@ const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
 const currentTimeEL = document.getElementById('current-time');
 const durationEL= document.getElementById('duration');
+const volume = document.getElementById('volume');
+const volBtn = document.getElementById('volumeBtn');
 //Music
 const songs = [
     {
@@ -226,6 +228,25 @@ function setProgressBar(e){
     music.currentTime = (clickX / width) * duration;
 }
 
+//set volume bar
+function setVolume(){
+    music.volume = volume.value / 100;
+}
+let isMute = false;
+//set mute && unmute volume
+function unMuteVolume(){
+    isMute = false;
+    music.muted = false;
+    volBtn.classList.replace('fa-volume-off', 'fa-volume-up');
+    volBtn.setAttribute('title', 'mute');
+}
+
+function muteVolume(){
+    isMute = true;
+    music.muted = true;
+    volBtn.classList.replace('fa-volume-up', 'fa-volume-off');
+    volBtn.setAttribute('title', 'unmute')
+}
 //Onload select first song
 loadSong(songs[indexSong]);
 
@@ -235,3 +256,5 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
+volume.addEventListener('change', setVolume);
+volBtn.addEventListener('click', () => (isMute ? unMuteVolume() : muteVolume()));
