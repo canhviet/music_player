@@ -239,13 +239,15 @@ function unMuteVolume(){
     music.muted = false;
     volBtn.classList.replace('fa-volume-off', 'fa-volume-up');
     volBtn.setAttribute('title', 'mute');
+    volume.value = 20;
 }
 
 function muteVolume(){
     isMute = true;
     music.muted = true;
     volBtn.classList.replace('fa-volume-up', 'fa-volume-off');
-    volBtn.setAttribute('title', 'unmute')
+    volBtn.setAttribute('title', 'unmute');
+    volume.value = 0;
 }
 //Onload select first song
 loadSong(songs[indexSong]);
