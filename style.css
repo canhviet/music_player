@@ -1,0 +1,104 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+}
+
+.Menu{
+    margin: 0;
+    position: relative;
+    top: 0;
+}
+.player-container h2{
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+.player-container h3{
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+}
+
+.player-container{
+    height: 500px;
+    width: 400px;
+    background: #acb0b4;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-container{
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+.img-container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.progress-container{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px;
+    height: 4px;
+    width: 90%;
+}
+
+.progress{
+    background: #242424;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.duration-wrapper{
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-controls{
+    position: relative;
+    top: -15px;
+    left: 125px;
+    width: 200px;
+}
+
+.fa{
+    font-size: 30px;
+    color: rgb(129, 129, 129);
+    margin-right: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover{
+    filter: brightness(80%);
+}
+@media screen and (max-width: 376px) {
+    .player-container{
+        width: 95vw;
+    }
+    .img-container{
+        position: relative;
+        top: -50px;
+        left: 30px;
+    }
+}

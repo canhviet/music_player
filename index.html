@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="hinh/anh_3.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nhạc Của Việt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <!--Song-->
+        <div class="img-container">
+            <img src="hinh/anh_1.jpg" alt="">
+        </div>
+        <h2 id="title"></h2>
+        <h3 id="artist"></h3>
+        <audio src=""></audio>
+        <!--progress-->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0 : 00</span>
+                <span id="duration">5 : 07</span>
+            </div>
+        </div>
+        <!--controls-->
+        <div class="player-controls">
+            <i class="fa fa-backward" id="prev" title="previous"></i>
+            <i class="fa fa-play" id="play" title="play"></i>
+            <i class="fa fa-forward" id="next" title="next"></i>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
